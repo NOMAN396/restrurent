@@ -38,14 +38,14 @@ class="la la-plus"></i></a>
 {{ __('Inactive') }}
 @endif</td>
 <td class="white-space-nowrap">
-<a href="{{ route('items.edit', encryptor('encrypt', $p->id)) }}">
+<a href="{{ route('item_varients.edit', encryptor('encrypt', $p->id)) }}">
 <i class="la la-edit"></i>
 </a>
 <a href="javascript:void()" onclick="$('#form{{ $p->id }}').submit()">
 <i class="la la-trash"></i>
 </a>
 <form id="form{{ $p->id }}"
-action="{{ route('items.destroy', encryptor('encrypt', $p->id)) }}"
+action="{{ route('item_varients.destroy', encryptor('encrypt', $p->id)) }}"
 method="post">
 @csrf
 @method('delete')

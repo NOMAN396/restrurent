@@ -19,7 +19,7 @@ action="{{ route('purcheses.store') }}">
 <select  id="supplier_id" name="supplier_id" required class="form-control">
 <option value="">Select Class</option>
 @forelse($supplier as $c)
-<option {{old('supplier_id')==$c->id}} value="{{$c->id}}">{{$c->name}}</option>
+<option {{old('supplier_id')==$c->id}} value="{{$c->id}}">{{$c->id}}</option>
 @empty
 <option value="">No Item found</option>
 @endforelse

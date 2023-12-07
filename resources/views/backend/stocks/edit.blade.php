@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', trans('update Item'))
+@section('title', trans('update Stocks'))
 @section('pageSubTitle', trans('Update'))
 
 @section('content')
@@ -44,7 +44,7 @@
 <select  id="purches_id" name="purches_id" required class="form-control">
 <option value="">Select Class</option>
 @forelse($purcheses as $k)
-<option {{old('purches_id')==$k->id}} value="{{$k->id}}" >{{$k->name}}</option>
+<option {{old('purches_id')==$k->id}} value="{{$k->id}}" >{{$k->id}}</option>
 @empty
 <option value="">No purches_id found</option>
 @endforelse
@@ -75,7 +75,7 @@
 <div class="form-group">
 <label for="quentity">quentity<i class="text-danger">*</i></label>
 <input type="text" id="quentity" class="form-control"
-value="{{ old('quentity') }}" name="quentity">
+value="{{ old('quentity',$stock->quentity) }}" name="quentity">
 @if ($errors->has('name'))
 <span class="text-danger"> {{ $errors->first('name') }}</span>
 @endif
@@ -83,7 +83,7 @@ value="{{ old('quentity') }}" name="quentity">
 <div class="form-group">
 <label for="name">price <i class="text-danger">*</i></label>
 <input type="text" id="price" class="form-control"
-value="{{ old('price') }}" name="price">
+value="{{ old('price',$stock->price) }}" name="price">
 @if ($errors->has('name'))
 <span class="text-danger"> {{ $errors->first('name') }}</span>
 @endif

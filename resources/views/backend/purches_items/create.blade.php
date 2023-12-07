@@ -37,12 +37,12 @@ value="{{ old('item_name') }}" name="item_name">
 </div>
 <div class="form-group">
 <label>supplier_id</label>
-<select  id="row_item_id" name="row_item_id" required class="form-control">
+<select  id="supplier_id" name="supplier_id" required class="form-control">
 <option value="">Select Class</option>
 @forelse($supplier as $k)
 <option {{old('supplier_id')==$k->id}} value="{{$k->id}}" >{{$k->id}}</option>
 @empty
-<option value="">No row item found</option>
+<option value="">No supplier found</option>
 @endforelse
 </select>
 </div>

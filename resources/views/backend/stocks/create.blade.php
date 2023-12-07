@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', trans('Create Item'))
+@section('title', trans('Create Stock Item'))
 
 @section('content')
 <!-- // Basic multiple Column Form section start -->
@@ -41,7 +41,7 @@ action="{{ route('stocks.store') }}">
 <select  id="purches_id" name="purches_id" required class="form-control">
 <option value="">Select Class</option>
 @forelse($purcheses as $k)
-<option {{old('purches_id')==$k->id}} value="{{$k->id}}" >{{$k->name}}</option>
+<option {{old('purches_id')==$k->id}} value="{{$k->id}}" >{{$k->id}}</option>
 @empty
 <option value="">No purches found</option>
 @endforelse

@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Model\kitchen;
 use Illuminate\Database\Eloquent\Model\item_varient;
 use Illuminate\Database\Eloquent\Model\order_details;
 use Illuminate\Database\Eloquent\Model\stock;
@@ -15,7 +14,7 @@ class Item extends Model
         return $this->belongsto(Catagory::class);
     }
     public function kitchen(){
-        return $this->belongsto(kitchen::class);
+        return $this->belongsto(Kitchen::class);
     }
     public function item_varient(){
         return $this->hasMany(item_varient::class);

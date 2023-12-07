@@ -11,4 +11,7 @@ class Purches_detail extends Model
     public function purcheses(){
         return $this->belongsto(Purcheses::class);
     }
+    public function unit(){
+        return $this->belongsto(Unit::class);
+    }
 }

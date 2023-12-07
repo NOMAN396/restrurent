@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', trans('Create Kitchens'))
+@section('title', trans('Create Supplier'))
 
 @section('content')
 <!-- // Basic multiple Column Form section start -->

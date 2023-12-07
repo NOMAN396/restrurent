@@ -20,7 +20,7 @@
 <select  id="order_id" name="order_id" required class="form-control">
 <option value="">Select Class</option>
 @forelse($order as $c)
-<option {{old('order_id')==$c->id}} value="{{$c->id}}">{{$c->name}}</option>
+<option {{old('order_id')==$c->id}} value="{{$c->id}}">{{$c->id}}</option>
 @empty
 <option value="">No 0rder found</option>
 @endforelse
@@ -32,7 +32,7 @@
 <select  id="customer_id" name="customer_id" required class="form-control">
 <option value="">Select Class</option>
 @forelse($customer as $k)
-<option {{old('customer_id')==$k->id}} value="{{$k->id}}" >{{$k->name}}</option>
+<option {{old('customer_id')==$k->id}} value="{{$k->id}}" >{{$k->id}}</option>
 @empty
 <option value="">No customer_id found</option>
 @endforelse
@@ -41,7 +41,7 @@
 <div class="form-group">
 <label for="name">Pay Amount <i class="text-danger">*</i></label>
 <input type="text" id="name" class="form-control"
-value="{{ old('pay_amount') }}" name="pay_amount">
+value="{{ old('pay_amount',$order_payment->pay_amount) }}" name="pay_amount">
 @if ($errors->has('name'))
 <span class="text-danger"> {{ $errors->first('name') }}</span>
 @endif
@@ -50,7 +50,7 @@ value="{{ old('pay_amount') }}" name="pay_amount">
 <div class="form-group">
 <label for="name">Pay Type<i class="text-danger">*</i></label>
 <input type="text" id="name" class="form-control"
-value="{{ old('pay_type') }}" name="pay_type">
+value="{{ old('pay_type',$order_payment->pay_type) }}" name="pay_type">
 @if ($errors->has('name'))
 <span class="text-danger"> {{ $errors->first('name') }}</span>
 @endif

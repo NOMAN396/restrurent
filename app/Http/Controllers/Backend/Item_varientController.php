@@ -61,16 +61,17 @@ class Item_varientController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Item_varient $item_varient)
+    public function edit(string $id)
     {
+        $item = Item::get();
         $item_varient=Item_varient::findOrFail(encryptor('decrypt',$id));
-        return view('backend.item_varients.edit',compact('item_varient')); 
+        return view('backend.item_varients.edit',compact('item_varient','item')); 
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Item_varient $item_varient)
+    public function update(Request $request,$id)
     {
         try{
             $item_varient=Item_varient::findOrFail(encryptor('decrypt',$id));
@@ -92,7 +93,7 @@ class Item_varientController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Item_varient $item_varient)
+    public function destroy(string $id)
     {
         $item_varient=Item_varient::findOrFail(encryptor('decrypt',$id));
         if($item_varient->delete()){

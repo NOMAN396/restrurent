@@ -18,6 +18,7 @@ class="la la-plus"></i></a>
 <thead>
 <tr>
 <th scope="col">{{ __('#SL') }}</th>
+<th scope="col">{{ __('ID') }}</th>
 <th scope="col">{{ __('name') }}</th>
 <th scope="col">{{ __('description') }}</th>
 <th scope="col">{{ __('Status') }}</th>
@@ -29,10 +30,9 @@ class="la la-plus"></i></a>
 @forelse($row_item as $p)
 <tr>
 <th scope="row">{{ ++$loop->index}}</th>
-<!-- <td>{{$p->id}}</td> -->
+<td>{{$p->id}}</td>
 <td>{{ $p->name }}</td>
 <td>{{ $p->description }}</td>
-
 <td>{{ $p->status }}@if ($p->status == 1)
 {{ __('Active') }}
 @else

@@ -41,7 +41,7 @@
 <div class="form-group">
 <label for="name">Pay Amount <i class="text-danger">*</i></label>
 <input type="text" id="name" class="form-control"
-value="{{ old('payment') }}" name="payment">
+value="{{ old('payment',$purches_payment->payment) }}" name="payment">
 @if ($errors->has('name'))
 <span class="text-danger"> {{ $errors->first('name') }}</span>
 @endif
@@ -50,7 +50,7 @@ value="{{ old('payment') }}" name="payment">
 <div class="form-group">
 <label for="name">Pay Type<i class="text-danger">*</i></label>
 <input type="text" id="name" class="form-control"
-value="{{ old('paytype') }}" name="paytype">
+value="{{ old('paytype',$purches_payment->paytype) }}" name="paytype">
 @if ($errors->has('name'))
 <span class="text-danger"> {{ $errors->first('name') }}</span>
 @endif

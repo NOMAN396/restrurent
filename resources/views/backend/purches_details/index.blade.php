@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-@section('title', trans('Item List'))
+@section('title', trans('Purches_detail List'))
 
 @section('content')
 
@@ -20,7 +20,7 @@ class="la la-plus"></i></a>
 <th scope="col">{{ __('#SL') }}</th>
 <th scope="col">{{ __('purches_id') }}</th>
 <th scope="col">{{ __('row_item_id') }}</th>
-<th scope="col">{{ __('unit_id') }}</th>
+<th scope="col">{{ __('Unit') }}</th>
 <th scope="col">{{ __('quentity') }}</th>
 <th scope="col">{{ __('price') }}</th>
 <th class="white-space-nowrap">{{ __('Action') }}</th>
@@ -32,7 +32,7 @@ class="la la-plus"></i></a>
 <th scope="row">{{ ++$loop->index }}</th>
 <td>{{ $p->purches_id }}</td>
 <td>{{ $p->row_item_id}}</td>
-<td>{{ $p->unit_id}}</td>
+<td>{{ $p->Unit?->name}}</td>
 <td>{{ $p->quentity }}</td>
 <td>{{ $p->price }}</td>
 <td class="white-space-nowrap">

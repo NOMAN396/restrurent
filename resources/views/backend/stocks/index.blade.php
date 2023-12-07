@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-@section('title', trans('Item List'))
+@section('title', trans('Stocks List'))
 
 @section('content')
 
@@ -22,7 +22,7 @@ class="la la-plus"></i></a>
 <th scope="col">{{ __('row_id') }}</th>
 <th scope="col">{{ __('purches_id') }}</th>
 <th scope="col">{{ __('kitchen_id') }}</th>
-<th scope="col">{{ __('unit_id') }}</th>
+<th scope="col">{{ __('Unit') }}</th>
 <th scope="col">{{ __('quentity') }}</th>
 <th scope="col">{{ __('price') }}</th>
 <th class="white-space-nowrap">{{ __('Action') }}</th>
@@ -36,7 +36,7 @@ class="la la-plus"></i></a>
 <td>{{ $p->row_id }}</td>
 <td>{{ $p->purches_id }}</td>
 <td>{{ $p->kitchen_id }}</td>
-<td>{{ $p->unit_id }}</td>
+<td>{{ $p->Unit?->name }}</td>
 <td>{{ $p->quentity }}</td>
 <td>{{ $p->price }}</td>
 <td class="white-space-nowrap">

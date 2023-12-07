@@ -53,7 +53,7 @@
 <div class="form-group">
 <label for="quentity">quentity<i class="text-danger">*</i></label>
 <input type="text" id="quentity" class="form-control"
-value="{{ old('quentity') }}" name="quentity">
+value="{{ old('quentity',$purches_detail->quentity) }}" name="quentity">
 @if ($errors->has('name'))
 <span class="text-danger"> {{ $errors->first('name') }}</span>
 @endif
@@ -61,7 +61,7 @@ value="{{ old('quentity') }}" name="quentity">
 <div class="form-group">
 <label for="name">price <i class="text-danger">*</i></label>
 <input type="text" id="price" class="form-control"
-value="{{ old('price') }}" name="price">
+value="{{ old('price',$purches_detail->price) }}" name="price">
 @if ($errors->has('name'))
 <span class="text-danger"> {{ $errors->first('name') }}</span>
 @endif

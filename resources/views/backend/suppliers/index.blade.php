@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-@section('title', trans('Kitchen List'))
+@section('title', trans('Supplier List'))
 
 @section('content')
 

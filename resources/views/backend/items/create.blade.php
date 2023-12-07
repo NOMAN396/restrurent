@@ -53,7 +53,6 @@ value="{{ old('cocking_type') }}" name="cocking_type">
 <span class="text-danger"> {{ $errors->first('name') }}</span>
 @endif
 </div>
-
 <div class="form-group">
 <label for="name">Description <i class="text-danger">*</i></label>
 <input type="text" id="description" class="form-control"
@@ -62,9 +61,6 @@ value="{{ old('description') }}" name="description">
 <span class="text-danger"> {{ $errors->first('name') }}</span>
 @endif
 </div>
-
-
-<div class="col-md-6 col-12">
 <div class="form-group">
 <label for="status">Status</label>
 <select id="status" class="form-control" name="status">
@@ -77,8 +73,6 @@ Inactive</option>
 <span class="text-danger"> {{ $errors->first('status') }}</span>
 @endif
 </div>
-</div>
-<div class="col-md-6 col-12">
 <div class="form-group">
 <label for="image">Image</label>
 <input type="file" id="image" class="form-control"

@@ -36,7 +36,7 @@ class="la la-plus"></i></a>
 <td><img width="50px" src="{{ asset('public/uploads/items/' . $p->image) }}"
 alt=""></td>
 <td>{{ $p->catagory?->name}}</td>
-<td>{{ $p->kitchen_id}}</td>
+<td>{{ $p->kitchen?->name}}</td>
 <td>{{ $p->cocking_type }}</td>
 <td>{{ $p->description }}</td>
 <td>{{ $p->status }}@if ($p->status == 1)

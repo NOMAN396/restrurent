@@ -19,7 +19,7 @@ class="la la-plus"></i></a>
 <tr>
 <th scope="col">{{ __('#SL') }}</th>
 <th scope="col">{{ __('supplier_id') }}</th>
-<th scope="col">{{ __('su_amount') }}</th>
+<th scope="col">{{ __('sum_amount') }}</th>
 <th scope="col">{{ __('vat') }}</th>
 <th scope="col">{{ __('discount') }}</th>
 <th scope="col">{{ __('ddiscount_type') }}</th>
