@@ -25,6 +25,8 @@ use App\Http\Controllers\Backend\Purches_detailController as purchese_detail;
 use App\Http\Controllers\Backend\SupplierController as supplier;
 use App\Http\Controllers\Backend\Purches_itemController as purches_item;
 use App\Http\Controllers\Backend\WaiterController as waiter;
+use App\Http\Controllers\Backend\BookingtableController as bookings;
+use App\Http\Controllers\Backend\FrontendbookingController as frontend_booking;
 
 
 /*
@@ -45,13 +47,14 @@ Route::post('/login', [auth::class,'signInCheck'])->name('login.check');
 Route::get('/logout', [auth::class,'singOut'])->name('logOut');
 
 Route::middleware(['checkauth'])->prefix('admin')->group(function(){
-    Route::get('dashboard', [dashboard::class,'index'])->name('dashboard');
+Route::get('dashboard', [dashboard::class,'index'])->name('dashboard');
 });
 
+Route::post('fontendbookings',[frontend_booking::class,'store'])->name('fontendbookings.store');
 
 
 
-Route::middleware(['checkrole'])->prefix('admin')->group(function(){
+    Route::middleware(['checkrole'])->prefix('admin')->group(function(){
     Route::resource('user', user::class);
     Route::resource('role', role::class);
     Route::get('permission/{role}', [permission::class,'index'])->name('permission.list');
@@ -74,6 +77,8 @@ Route::middleware(['checkrole'])->prefix('admin')->group(function(){
     Route::resource('suppliers',supplier::class);
     Route::resource('purches_items',purches_item::class);
     Route::resource('waiters',waiter::class);
+    Route::resource('bookingtables',bookings::class);
+    Route::resource('fontendbookings',frontend_booking::class);
 
 });
 

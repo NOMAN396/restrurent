@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', trans('update Waiter List'))
+@section('title', trans('update Booking List'))
 @section('pageSubTitle', trans('Update'))
 
 @section('content')
@@ -12,63 +12,59 @@
 <div class="card-content">
 <div class="card-body">
 <form class="form" method="post" enctype="multipart/form-data"
-            action="{{ route('waiters.update', encryptor('encrypt', $waiter->id)) }}">
+            action="{{ route('bookingtables.update', encryptor('encrypt', $bookingtable->id)) }}">
             @csrf
             @method('PATCH')
 
             <div class="form-group">
 <label for="item_name">name<i class="text-danger">*</i></label>
 <input type="text" id="name" class="form-control"
-value="{{ old('name',$waiter->name) }}" name="name">
+value="{{ old('name',$bookingtable->name) }}" name="name">
 @if ($errors->has('name'))
 <span class="text-danger"> {{ $errors->first('name') }}</span>
 @endif
 </div>
 
 <div class="form-group">
-<label for="item_name">designation_id<i class="text-danger">*</i></label>
+<label for="item_name">email<i class="text-danger">*</i></label>
 <input type="text" id="quentity" class="form-control"
-value="{{ old('designation_id',$waiter->designation_id) }}" name="designation_id">
+value="{{ old('email',$bookingtable->email) }}" name="email">
 @if ($errors->has('name'))
 <span class="text-danger"> {{ $errors->first('name') }}</span>
 @endif
 </div>
 
 <div class="form-group">
-<label for="item_name">contact<i class="text-danger">*</i></label>
+<label for="item_name">phone<i class="text-danger">*</i></label>
 <input type="text" id="quentity" class="form-control"
-value="{{ old('contact',$waiter->contact) }}" name="contact">
+value="{{ old('phone',$bookingtable->phone) }}" name="phone">
 @if ($errors->has('name'))
 <span class="text-danger"> {{ $errors->first('name') }}</span>
 @endif
 </div>
 <div class="form-group">
-<label for="item_name">present_address<i class="text-danger">*</i></label>
-<input type="text" id="quentity" class="form-control"
-value="{{ old('present_address',$waiter->present_address) }}" name="present_address">
+<label for="date">date<i class="text-danger">*</i></label>
+<input type="date" id="quentity" class="form-control"
+value="{{ old('date',$bookingtable->date) }}" name="date">
 @if ($errors->has('name'))
 <span class="text-danger"> {{ $errors->first('name') }}</span>
 @endif
 </div>
 
 <div class="form-group">
-<label for="item_name">permanent_address<i class="text-danger">*</i></label>
+<label for="item_name">time<i class="text-danger">*</i></label>
 <input type="text" id="quentity" class="form-control"
-value="{{ old('permanent_address',$waiter->permanent_address) }}" name="permanent_address">
+value="{{ old('time',$bookingtable->time) }}" name="time">
 @if ($errors->has('name'))
 <span class="text-danger"> {{ $errors->first('name') }}</span>
 @endif
 </div>
 <div class="form-group">
-<label for="status">Status</label>
-<select id="status" class="form-control" name="status">
-<option value="1" @if (old('status') == 1) selected @endif>
-Active</option>
-<option value="0" @if (old('status') == 0) selected @endif>
-Inactive</option>
-</select>
-@if ($errors->has('status'))
-<span class="text-danger"> {{ $errors->first('status') }}</span>
+<label for="item_name">people<i class="text-danger">*</i></label>
+<input type="text" id="quentity" class="form-control"
+value="{{ old('people',$bookingtable->people) }}" name="people">
+@if ($errors->has('name'))
+<span class="text-danger"> {{ $errors->first('name') }}</span>
 @endif
 </div>
 <div class="row">

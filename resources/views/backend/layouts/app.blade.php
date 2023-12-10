@@ -185,6 +185,8 @@
                             data-i18n="">Purches_items</span></a></li>
                                     <li><a href="{{route('waiters.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
                             data-i18n="">Waiters</span></a></li>
+                                    <li><a href="{{route('fontendbookings.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
+                            data-i18n="">online Table</span></a></li>
                             
                                 </ul>
                             </li>
@@ -192,7 +194,7 @@
                                     data-i18n="">POS</span></a>
                                     </li> 
                 <li class=" nav-item"><a
-                        href="https://themeselection.com/demo/chameleon-admin-template/documentation"><i
+                        href="{{route('bookingtables.index')}}"><i
                             class="ft-book"></i><span class="menu-title" data-i18n="">Booking Table</span></a>
                 </li>
             </ul>
