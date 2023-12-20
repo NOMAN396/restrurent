@@ -62,10 +62,8 @@ action="{{ route('suppliers.destroy', encryptor('encrypt', $p->id)) }}"
 method="post">
 @csrf
 @method('delete')
-
 </form>
 </td>
-
 @empty
 <tr>
 <th colspan="8" class="text-center">No kitchens Found</th>

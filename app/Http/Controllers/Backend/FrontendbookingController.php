@@ -28,8 +28,8 @@ class FrontendbookingController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        
+    {    
+        try{
             $fbookingtable= new Frontendbooking();
             $fbookingtable->name=$request->name;
             $fbookingtable->email=$request->email;
@@ -38,8 +38,23 @@ class FrontendbookingController extends Controller
             $fbookingtable->time=$request->time;
             $fbookingtable->people=$request->people;    
             $fbookingtable->save();
-            return redirect->route('fontendbookings')->with('status', 'Blog Post Form Data Has Been inserted');
+            return redirect()->route('fontendbookings.index')->with('status', 'Blog Post Form Data Has Been inserted');
+        
+        
+            if($fbookingtable->save())
+            return redirect()->route('fontendbookings.index')->with('success','Successfully saved');
+        else
+            return redirect()->back()->withInput()->with('error','Please try again');
+        
+            
+         }catch(Exception $e){
+    
+            return redirect()->back()->withInput()->with('error','Please try again');
         }
+
+
+    }
+
 
     /**
      * Display the specified resource.

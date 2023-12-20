@@ -64,8 +64,8 @@
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
-                    <li><a class="nav-link scrollto" href="#specials">Specials</a></li>
+                    <li><a class="nav-link scrollto" href="">Menu</a></li>
+                    <li><a class="nav-link scrollto" href="{{route('shop')}}">Specials</a></li>
                     <li><a class="nav-link scrollto" href="#events">Events</a></li>
                     <li><a class="nav-link scrollto" href="#chefs">Chefs</a></li>
                     <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>

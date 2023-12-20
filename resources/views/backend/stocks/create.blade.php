@@ -14,17 +14,17 @@
 action="{{ route('stocks.store') }}">
 @csrf
 
-<div class="form-group">
+<!-- <div class="form-group">
 <label>Item ID</label>
 <select  id="item_id" name="item_id" required class="form-control">
 <option value="">Select Class</option>
 @forelse($item as $c)
-<option {{old('item_id')==$c->id}} value="{{$c->id}}">{{$c->id}}</option>
+<option {{old('item_id')==$c->id}} value="{{$c->id}}">{{$c->item_name}}</option>
 @empty
 <option value="">No Item found</option>
 @endforelse
 </select>
-</div>
+</div> -->
 <div class="form-group">
 <label>row_item List</label>
 <select  id="row_id" name="row_id" required class="form-control">

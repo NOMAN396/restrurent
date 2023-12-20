@@ -18,7 +18,6 @@ class="la la-plus"></i></a>
 <thead>
 <tr>
 <th scope="col">{{ __('#SL') }}</th>
-<th scope="col">{{ __('item_id') }}</th>
 <th scope="col">{{ __('row_id') }}</th>
 <th scope="col">{{ __('purches_id') }}</th>
 <th scope="col">{{ __('kitchen_id') }}</th>
@@ -32,7 +31,6 @@ class="la la-plus"></i></a>
 @forelse($stock as $p)
 <tr>
 <th scope="row">{{ ++$loop->index }}</th>
-<td>{{ $p->item_id}}</td>
 <td>{{ $p->row_id }}</td>
 <td>{{ $p->purches_id }}</td>
 <td>{{ $p->kitchen_id }}</td>

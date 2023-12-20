@@ -143,24 +143,48 @@
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
                 <li class="active"><a href="{{ route('dashboard') }}"><i class="ft-home"></i><span
                             class="menu-title" data-i18n="">Dashboard</span></a>
-                </li>
-                <li class="dropdown"><a href="#"><span>Restrurent</span> <i
-                                        class="la la-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="{{ route('user.index') }}"><i class="ft-pie-chart"></i><span
+                </li> 
+                <br>    
+                <li class="dropdown"><span class="pl-5">Users</span><i class="la la-chevron-right"></i> 
+        <ul>
+                <li><a href="{{ route('user.index') }}"><i class="ft-pie-chart"></i><span
                             class="menu-title" data-i18n="">Users</span></a></li>
                                     <li><a href="{{ route('role.index') }}"><i class="ft-pie-chart"></i><span
-                            class="menu-title" data-i18n="">Role</span></a></li>
-                                    <li><a href="{{ route('catagories.index') }}"><i class="ft-droplet"></i><span
-                            class="menu-title" data-i18n="">Catagories</span></a></li>
-                                    <li><a href="{{ route('items.index') }}"><i class="ft-layers"></i><span class="menu-title"
+                            class="menu-title" data-i18n="">Role</span></a></li> 
+                </ul>
+        </li>
+                                                                  
+                                                                                      
+                        <br>
+                            <li class="dropdown"><span class="pl-5">Items</span><i class="la la-chevron-right"></i>
+
+                           <ul>                                              
+                           <li><a href="{{ route('items.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
                             data-i18n="">Item</span></a></li>
-                                    <li><a href="{{route('kitchens.index')}}"><i class="ft-box"></i><span class="menu-title"
-                            data-i18n="">Kitchen</span></a></li>
-                                    <li><a href="{{route('kitchen_catagories.index')}}"><i class="ft-bold"></i><span class="menu-title"
-                            data-i18n="">kichenCatagory</span></a></li>
-                                    <li><a href="{{route('item_varients.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
+                            <li><a href="{{route('item_varients.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
                             data-i18n="">Item Varients</span></a></li>
+                            <li><a href="{{route('purches_items.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
+                            data-i18n="">Purches_items</span></a></li>
+                           </ul>
+                        </li>
+                        <br>
+
+
+                        <li class="dropdown"><span class="pl-5">Catagories</span><i class="la la-chevron-right"></i>
+                         <ul>
+                         <li><a href="{{route('kitchens.index')}}"><i class="ft-box"></i><span class="menu-title"
+                            data-i18n="">Kitchen</span></a></li>
+                            <li><a href="{{ route('catagories.index') }}"><i class="ft-droplet"></i><span
+                            class="menu-title" data-i18n="">Catagories</span></a></li>
+                            <li><a href="{{route('kitchen_catagories.index')}}"><i class="ft-bold"></i><span class="menu-title"
+                            data-i18n="">kichenCatagory</span></a></li>
+                         </ul>
+                        </li>
+                        
+                         <br>
+                        <li class="dropdown"><span class="pl-5">Customers</span><i class="la la-chevron-right"></i>
+
+                             <ul>
                                     <li><a href="{{route('order_details.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
                             data-i18n="">Order_details</span></a></li>
                                     <li><a href="{{route('customers.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
@@ -169,6 +193,11 @@
                             data-i18n="">Payments</span></a></li>
                                     <li><a href="{{route('purches_payments.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
                             data-i18n="">Purches</span></a></li>
+                            </ul>
+                            <li>
+                                            <br>                    
+   <li class="dropdown"><span class="pl-5">Row Item</span><i class="la la-chevron-right"></i>
+   <ul>
                                     <li><a href="{{route('row_items.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
                             data-i18n="">Row Item</span></a></li>
                                     <li><a href="{{route('stocks.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
@@ -179,28 +208,39 @@
                             data-i18n="">purchesss</span></a></li>
                                     <li><a href="{{route('purches_details.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
                             data-i18n="">purches_details</span></a></li>
-                                    <li><a href="{{route('suppliers.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
+                            <li><a href="{{route('suppliers.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
                             data-i18n="">Suppliers</span></a></li>
-                                    <li><a href="{{route('purches_items.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
+                            <li><a href="{{route('purches_items.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
                             data-i18n="">Purches_items</span></a></li>
+</ul>
+ </li>   
+
+
+
+                                  
+                                    
                                     <li><a href="{{route('waiters.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
                             data-i18n="">Waiters</span></a></li>
                                     <li><a href="{{route('fontendbookings.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
                             data-i18n="">online Table</span></a></li>
+                                    <li><a href="{{route('products.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
+                            data-i18n="">Add Products</span></a></li>
                             
-                                </ul>
-                            </li>
+                              
+                       
                                     <li class=" nav-item"><a href="{{route('orders.index')}}"><i class="ft-layout"></i><span class="menu-title"
-                                    data-i18n="">POS</span></a>
+                                    data-i18n="">Orders</span></a>
                                     </li> 
                 <li class=" nav-item"><a
                         href="{{route('bookingtables.index')}}"><i
                             class="ft-book"></i><span class="menu-title" data-i18n="">Booking Table</span></a>
                 </li>
+                <li class=" nav-item"><a
+                        href="{{route('orderlists.index')}}"><i
+                            class="ft-book"></i><span class="menu-title" data-i18n="">Din-In</span></a>
+                </li>
             </ul>
-        </div><a class="btn btn-danger btn-block btn-glow btn-upgrade-pro mx-1"
-            href="https://themeselection.com/products/chameleon-admin-modern-bootstrap-webapp-dashboard-html-template-ui-kit/"
-            target="_blank">Download PRO!</a>
+        </div>
         <div class="navigation-background"></div>
 
     </div>

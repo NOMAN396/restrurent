@@ -16,7 +16,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        $item=Item::paginate(10);
+        $item=Item::paginate(12);
         return view('backend.items.index',compact('item'));
     }
 

@@ -27,6 +27,11 @@ use App\Http\Controllers\Backend\Purches_itemController as purches_item;
 use App\Http\Controllers\Backend\WaiterController as waiter;
 use App\Http\Controllers\Backend\BookingtableController as bookings;
 use App\Http\Controllers\Backend\FrontendbookingController as frontend_booking;
+use App\Http\Controllers\Backend\ProductController as addproduct;
+use App\Http\Controllers\Backend\CartController;
+use App\Http\Controllers\Backend\OrderlistController  as orderlist;
+
+
 
 
 /*
@@ -51,9 +56,6 @@ Route::get('dashboard', [dashboard::class,'index'])->name('dashboard');
 });
 
 Route::post('fontendbookings',[frontend_booking::class,'store'])->name('fontendbookings.store');
-
-
-
     Route::middleware(['checkrole'])->prefix('admin')->group(function(){
     Route::resource('user', user::class);
     Route::resource('role', role::class);
@@ -79,11 +81,28 @@ Route::post('fontendbookings',[frontend_booking::class,'store'])->name('fontendb
     Route::resource('waiters',waiter::class);
     Route::resource('bookingtables',bookings::class);
     Route::resource('fontendbookings',frontend_booking::class);
+    Route::resource('products',addproduct::class);
+    Route::resource('orderlists',orderlist::class);
 
 });
 
 
 Route::get('/', function () {
     return view('frontend.home');
-});
+})->name('home');
+
+Route::get('shop', [addproduct::class, 'frontIndex'])->name('noman');
+
+
+Route::get('/shop', function () {
+    return view('frontend.shop');
+})->name('shop');
+
+Route::get('/shopdetails', function () {
+    return view('frontend.shopdetails');
+})->name('shopdetails');
+
+Route::get('/cart', function () {
+    return view('frontend.cart');
+})->name('cart');
 

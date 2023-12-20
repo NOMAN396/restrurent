@@ -19,7 +19,7 @@ class="la la-plus"></i></a>
 <tr>
 <th scope="col">{{ __('#SL') }}</th>
 <th scope="col">{{ __('order_id') }}</th>
-<th scope="col">{{ __('customer_id') }}</th>
+<th scope="col">{{ __('customer_name') }}</th>
 <th scope="col">{{ __('pay_amount') }}</th>
 <th scope="col">{{ __('pay_type') }}</th>
 <th class="white-space-nowrap">{{ __('Action') }}</th>
@@ -30,7 +30,7 @@ class="la la-plus"></i></a>
 <tr>
 <th scope="row">{{ ++$loop->index }}</th>
 <td>{{ $p->order_id }}</td>
-<td>{{ $p->customer_id}}</td>
+<td>{{ $p->Customer?->customer_name}}</td>
 <td>{{ $p->pay_amount }}</td>
 <td>{{ $p->pay_type }}</td>
 
