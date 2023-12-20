@@ -9,6 +9,9 @@ class Order extends Model
 {
     use HasFactory;
     public function customer(){
-        return $this->hasMany(Customer::class);
-}
+        return $this->belongsTo(Customer::class);
+    }
+    public function waiter(){
+        return $this->belongsTo(Waiter::class);
+    }
 }

@@ -15,12 +15,10 @@ return new class extends Migration
             $table->id();
             $table->integer('customer_id')->nullable();
             $table->string('sub_amount')->nullable();
-            $table->string('vat')->nullable();
-            $table->string('discount_type')->nullable();
+            $table->decimal('discount',10,2)->nullable();
             $table->date('order_date')->format('d.m.Y');
             $table->boolean('order_status')->nullable();
             $table->string('payment')->nullable();
-            $table->string('item_quentity')->nullable();
             $table->string('total_amount')->nullable();
             $table->integer('waiter_id')->nullable();
             

@@ -185,8 +185,6 @@
                         <li class="dropdown"><span class="pl-5">Customers</span><i class="la la-chevron-right"></i>
 
                              <ul>
-                                    <li><a href="{{route('order_details.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
-                            data-i18n="">Order_details</span></a></li>
                                     <li><a href="{{route('customers.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
                             data-i18n="">Customers</span></a></li>
                                     <li><a href="{{route('order_payments.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
@@ -300,6 +298,7 @@
     <!-- BEGIN PAGE LEVEL JS-->
     <script src="{{ asset('public/theme-assets/js/scripts/pages/dashboard-lite.js') }}" type="text/javascript"></script>
     <!-- END PAGE LEVEL JS-->
+    @stack('scripts')
 </body>
 
 </html>

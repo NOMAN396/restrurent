@@ -635,15 +635,10 @@
                         atque vitae autem.</p>
                 </div>
 
-                <form action="{{ route('fontendbookings.store') }}" method="post" role="form" class="php-email-form">
-           @csrf
+                <form action="{{ route('fontendbookings.save') }}" method="post" role="form">
+                    @csrf
+
                     <div class="row">
-                    @if(session('status'))
-    <div class="alert alert-success">
-        {{ session('status') }}
-    </div>
-    @endif
-                
                         <div class="col-lg-4 col-md-6 form-group">
                             <input type="text" name="name" class="form-control" id="name"
                                 placeholder="Your Name" data-rule="minlen:4"
@@ -678,16 +673,8 @@
                             <div class="validate"></div>
                         </div>
                     </div>
-    
-                    <div class="mb-3">
-                        <div class="loading">Loading</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your booking request was sent. We will call back or send an Email to
-                            confirm your reservation. Thank you!</div>
-                    </div>
-                    <div class="text-center"><button type="submit">Send Message</button></div>
+                    <div class="text-center"><button type="submit" class="btn btn-primary mt-3">Send Message</button></div>
                 </form>
-
             </div>
         </section><!-- End Book A Table Section -->
 
@@ -1091,7 +1078,26 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('public/profile/assets/js/main.js') }}"></script>
-
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" ></script>
+		
+    <!-- endinject -->
+    <script>  
+          @if(Session::has('success'))  
+                  alert("{{ Session::get('success') }}")
+          @endif  
+          @if(Session::has('info'))  
+                  toastr.info("{{ Session::get('info') }}");  
+          @endif  
+          @if(Session::has('warning'))  
+                  toastr.warning("{{ Session::get('warning') }}");  
+          @endif  
+          @if(Session::has('error'))  
+            alert("{{ Session::get('error') }}")
+          @endif  
+    </script>
+  
 </body>
 
 </html>

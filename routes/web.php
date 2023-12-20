@@ -12,7 +12,6 @@ use App\Http\Controllers\Backend\ItemController as item;
 use App\Http\Controllers\Backend\KitchenController as kitchen;
 use App\Http\Controllers\Backend\Kitchen_catagoryController as kitchen_catagory;
 use App\Http\Controllers\Backend\Item_varientController as item_varient;
-use App\Http\Controllers\Backend\Order_detailController as order_detail;
 use App\Http\Controllers\Backend\OrderController as order;
 use App\Http\Controllers\Backend\CustomerController as customer;
 use App\Http\Controllers\Backend\Order_paymentController as payment;
@@ -53,10 +52,12 @@ Route::get('/logout', [auth::class,'singOut'])->name('logOut');
 
 Route::middleware(['checkauth'])->prefix('admin')->group(function(){
 Route::get('dashboard', [dashboard::class,'index'])->name('dashboard');
+Route::get('get_varient', [order::class,'get_varient'])->name('get_varient');
 });
 
-Route::post('fontendbookings',[frontend_booking::class,'store'])->name('fontendbookings.store');
-    Route::middleware(['checkrole'])->prefix('admin')->group(function(){
+Route::post('fontendbookings',[frontend_booking::class,'store'])->name('fontendbookings.save');
+
+Route::middleware(['checkrole'])->prefix('admin')->group(function(){
     Route::resource('user', user::class);
     Route::resource('role', role::class);
     Route::get('permission/{role}', [permission::class,'index'])->name('permission.list');
@@ -66,7 +67,6 @@ Route::post('fontendbookings',[frontend_booking::class,'store'])->name('fontendb
     Route::resource('kitchens', kitchen::class);
     Route::resource('kitchen_catagories',kitchen_catagory::class);
     Route::resource('item_varients',item_varient::class);
-    Route::resource('order_details',order_detail::class);
     Route::resource('orders',order::class);
     Route::resource('customers',customer::class);
     Route::resource('order_payments',payment::class);

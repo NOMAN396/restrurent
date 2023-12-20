@@ -18,15 +18,13 @@ class="la la-plus"></i></a>
 <thead>
 <tr>
 <th scope="col">{{ __('#SL') }}</th>
-<th scope="col">{{ __('customer_id') }}</th>
-<th scope="col">{{ __('sub_amount') }}</th>
-<th scope="col">{{ __('vat') }}</th>
-<th scope="col">{{ __('discount_type') }}</th>
-<th scope="col">{{ __('order_date') }}</th>
-<th scope="col">{{ __('item_quentity') }}</th>
-<th scope="col">{{ __('total_amount') }}</th>
+<th scope="col">{{ __('customer') }}</th>
 <th scope="col">{{ __('waiter_id') }}</th>
-<th scope="col">{{ __('order_status') }}</th>
+<th scope="col">{{ __('sub_amount') }}</th>
+<th scope="col">{{ __('discount') }}</th>
+<th scope="col">{{ __('order date') }}</th>
+<th scope="col">{{ __('total amount') }}</th>
+<th scope="col">{{ __('order status') }}</th>
 <th class="white-space-nowrap">{{ __('Action') }}</th>
 </tr>
 </thead>
@@ -35,18 +33,16 @@ class="la la-plus"></i></a>
 <tr>
 <th scope="row">{{ ++$loop->index }}</th>
 
-<td>{{ $p->customer_id}}</td>
+<td>{{ $p->customer?->customer_name}}</td>
+<td>{{ $p->waiter?->name }}</td>
 <td>{{ $p->sub_amount }}</td>
-<td>{{ $p->vat }}</td>
-<td>{{ $p->discount_type }}</td>
+<td>{{ $p->discount}}</td>
 <td>{{ $p->order_date }}</td>
-<td>{{ $p->item_quentity }}</td>
 <td>{{ $p->total_amount }}</td>
-<td>{{ $p->waiter_id }}</td>
-<td>{{ $p->order_status }}@if ($p->order_status == 1)
-{{ __('Active') }}
+<td>@if ($p->order_status == 1)
+{{ __('Paid') }}
 @else
-{{ __('Inactive') }}
+{{ __('Unpaid') }}
 @endif</td>
 
 

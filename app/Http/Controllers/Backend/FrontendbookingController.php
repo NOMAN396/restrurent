@@ -36,20 +36,11 @@ class FrontendbookingController extends Controller
             $fbookingtable->phone=$request->phone;
             $fbookingtable->date=$request->date;
             $fbookingtable->time=$request->time;
-            $fbookingtable->people=$request->people;    
-            $fbookingtable->save();
-            return redirect()->route('fontendbookings.index')->with('status', 'Blog Post Form Data Has Been inserted');
-        
-        
+            $fbookingtable->people=$request->people;  
             if($fbookingtable->save())
-            return redirect()->route('fontendbookings.index')->with('success','Successfully saved');
-        else
-            return redirect()->back()->withInput()->with('error','Please try again');
-        
-            
+                return redirect()->back()->with('success','Successfully saved');
          }catch(Exception $e){
-    
-            return redirect()->back()->withInput()->with('error','Please try again');
+                return redirect()->back()->withInput()->with('error','Please try again');
         }
 
 
