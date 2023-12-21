@@ -85,7 +85,7 @@ value="{{ old('bill_type') }}" name="bill_type">
 <select  id="item" name="item" required class="form-control">
 <option value="">Select Class</option>
 @forelse($item as $k)
-<option {{old('item')==$k->id}} value="{{$k->id}}" >{{$k->item_name}}</option>
+<option {{old('item')==$k->id}} value="{{$k->id}}">{{$k->item_name}}</option>
 @empty
 <option value="">No item found</option>
 @endforelse

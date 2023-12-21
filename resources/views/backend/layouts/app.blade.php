@@ -194,8 +194,8 @@
                             </ul>
                             <li>
                                             <br>                    
-   <li class="dropdown"><span class="pl-5">Row Item</span><i class="la la-chevron-right"></i>
-   <ul>
+                                <li class="dropdown"><span class="pl-5">Row Item</span><i class="la la-chevron-right"></i>
+                                <ul>
                                     <li><a href="{{route('row_items.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
                             data-i18n="">Row Item</span></a></li>
                                     <li><a href="{{route('stocks.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
@@ -210,8 +210,8 @@
                             data-i18n="">Suppliers</span></a></li>
                             <li><a href="{{route('purches_items.index')}}"><i class="ft-credit-card"></i><span class="menu-title"
                             data-i18n="">Purches_items</span></a></li>
-</ul>
- </li>   
+                            </ul>
+                            </li>   
 
 
 
@@ -227,7 +227,7 @@
                               
                        
                                     <li class=" nav-item"><a href="{{route('orders.index')}}"><i class="ft-layout"></i><span class="menu-title"
-                                    data-i18n="">Orders</span></a>
+                                    data-i18n="">POS</span></a>
                                     </li> 
                 <li class=" nav-item"><a
                         href="{{route('bookingtables.index')}}"><i

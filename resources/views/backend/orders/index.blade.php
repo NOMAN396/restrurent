@@ -18,13 +18,13 @@ class="la la-plus"></i></a>
 <thead>
 <tr>
 <th scope="col">{{ __('#SL') }}</th>
-<th scope="col">{{ __('customer') }}</th>
-<th scope="col">{{ __('waiter_id') }}</th>
-<th scope="col">{{ __('sub_amount') }}</th>
-<th scope="col">{{ __('discount') }}</th>
-<th scope="col">{{ __('order date') }}</th>
-<th scope="col">{{ __('total amount') }}</th>
-<th scope="col">{{ __('order status') }}</th>
+<th scope="col">{{ __('Customer') }}</th>
+<th scope="col">{{ __('Waiter') }}</th>
+<th scope="col">{{ __('Sub Amount') }}</th>
+<th scope="col">{{ __('Discount') }}</th>
+<th scope="col">{{ __('Date') }}</th>
+<th scope="col">{{ __('Total Amount') }}</th>
+<th scope="col">{{ __('Order status') }}</th>
 <th class="white-space-nowrap">{{ __('Action') }}</th>
 </tr>
 </thead>
@@ -50,8 +50,12 @@ class="la la-plus"></i></a>
 <a href="{{ route('orders.edit',encryptor('encrypt',$p->id)) }}">
 <i class="la la-edit"></i>
 </a>
+
 <a href="javascript:void()" onclick="$('#form{{ $p->id }}').submit()">
 <i class="la la-trash"></i>
+</a>
+<a href="{{ route('orders.show', encryptor('encrypt', $p->id)) }}">
+<i class="la la-eye" aria-hidden="true"></i>
 </a>
 <form id="form{{ $p->id }}"
 action="{{ route('orders.destroy',encryptor('encrypt',$p->id)) }}"
@@ -62,7 +66,6 @@ method="post">
 </td>
 
 @empty
-<tr>
 <th colspan="8" class="text-center">No order Found</th>
 </tr>
 @endforelse

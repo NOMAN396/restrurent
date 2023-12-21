@@ -21,7 +21,7 @@ class="la la-plus"></i></a>
 <th scope="col">{{ __('table_no') }}</th>
 <th scope="col">{{ __('waiter_Name') }}</th>
 <th scope="col">{{ __('bill_type') }}</th>
-<th scope="col">{{ __('item') }}</th>
+<th scope="col">{{ __('Item ID') }}</th>
 <th scope="col">{{ __('itemquentity') }}</th>
 
 <th class="white-space-nowrap">{{ __('Action') }}</th>
@@ -43,6 +43,9 @@ class="la la-plus"></i></a>
 </a>
 <a href="javascript:void()" onclick="$('#form{{ $c->id }}').submit()">
 <i class="la la-trash"></i>
+</a>
+<a href="{{ route('orderlists.show', encryptor('encrypt', $c->id)) }}">
+<i class="la la-eye" aria-hidden="true"></i>
 </a>
 <form id="form{{ $c->id }}"
 action="{{ route('orderlists.destroy', encryptor('encrypt', $c->id)) }}"
