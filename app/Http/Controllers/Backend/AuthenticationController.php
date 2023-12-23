@@ -15,7 +15,7 @@ use Exception;
 class AuthenticationController extends Controller
 {
     public function signUpForm(){
-        return view('backend.authentication.register');
+        return view('backend.Authentication.register');
     }
 
     public function signUpStore(SignupRequest $request){
@@ -39,7 +39,7 @@ class AuthenticationController extends Controller
     }
 
     public function signInForm(){
-        return view('backend.authentication.login');
+        return view('backend.Authentication.login');
     }
 
     public function signInCheck(SigninRequest $request){
