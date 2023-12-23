@@ -4,9 +4,7 @@
         <div class="form-v5-content">
             <form class="form-detail" action="{{ route('login.check') }}" method="post">
                 @csrf
-                <div class="">
-                    <a href="{{ route('register') }}">Sign up,</a> If does not have an account!
-                </div>
+                
                 <h2>Please Log In</h2>
 
                 <div class="form-row">
