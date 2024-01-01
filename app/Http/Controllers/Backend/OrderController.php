@@ -87,9 +87,10 @@ class OrderController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Order $order)
+    public function show($id)
     {
-        //
+        $order=Order::findOrFail(encryptor('decrypt',$id));
+        return view('backend.orders.show',compact('order'));
     }
 
     /**

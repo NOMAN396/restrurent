@@ -62,9 +62,10 @@ class OrderlistController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Orderlist $orderlist)
+    public function show($id)
     {
-        //
+        $oderlist=Orderlist::findOrFail(encryptor('decrypt',$id));
+        return view('backend.orderlists.show',compact('oderlist'));
     }
 
     /**

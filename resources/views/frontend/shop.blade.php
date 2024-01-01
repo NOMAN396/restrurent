@@ -108,17 +108,17 @@
             <div class="tab-content">
                 <div id="tab-1" class="tab-pane fade show p-0 active">
                     <div class="row g-4">
-                    @foreach ($product as $p)
+                   
                         <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         
                             <div class="product-item">
                                 <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="{{ asset('public/profile/uploads/products/'.$p->image) }}" alt="">
+                                    <img class="img-fluid w-100" src="{{ asset('public/profile/shop/img/fish.jpg') }}" alt="">
                                     <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                                 </div>
                                 <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">{{$p->name}}</a>
-                                    <span class="text-primary me-1">{{$p->price}}</span>
+                                    <a class="d-block h5 mb-2" href="">Specal Veg</a>
+                                    <span class="text-primary me-1">$20.00</span>
                                     <span class="text-body text-decoration-line-through">$29.00</span>
                                 </div>
                                 
@@ -134,7 +134,7 @@
                             </div>
                             
                         </div>
-                        @endforeach
+                
                         <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="product-item">
                            
@@ -144,8 +144,8 @@
                                 </div>
                                 <div class="text-center p-4">
                                     <a class="d-block h5 mb-2" href="">Fresh</a>
-                                    <span class="text-primary me-1">1000</span>
-                                   <!-- <span class="text-body text-decoration-line-through">$29.00</span> -->
+                                    <span class="text-primary me-1">10</span>
+                                    <span class="text-body text-decoration-line-through">$29.00</span>
                                 </div>
                     
                                 <div class="d-flex border-top">

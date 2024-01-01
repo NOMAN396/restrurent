@@ -75,7 +75,7 @@ value="{{ old('bill_type') }}" name="bill_type">
 
 <div class="form-group">
 <label>Item List</label>
-<select  id="item" name="item" required class="form-control">
+<select  id="items" name="items" required class="form-control">
 <option value="">Select Class</option>
 @forelse($item as $k)
 <option {{old('item')==$k->id}} value="{{$k->id}}" >{{$k->item_name}}</option>
